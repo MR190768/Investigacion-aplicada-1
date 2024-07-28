@@ -1,0 +1,62 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar image image";
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 10px;
+}
+.header {
+    grid-area: header;
+    background-color: #d32d2d; /* Rojo inspirado en la bandera de Japón */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+    border: 2px solid #d32d2d; /* Borde rojo */
+    color: #d32d2d; /* Texto rojo */
+}
+.sidebar p {
+    margin: 0;
+    padding: 5px 0;
+}
+.image {
+    grid-area: image;
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "image";
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "image";
+        grid-template-columns: 1fr;
+    }
+}
+img {
+    width: 35%;
+    height: auto;
+}
